@@ -4,6 +4,7 @@ import (
 	"Source_Predict/entity"
 	"Source_Predict/errorcode"
 	"Source_Predict/function"
+	"fmt"
 	"github.com/gin-gonic/gin"
 )
 
@@ -13,6 +14,7 @@ func main() {
 	router.GET("/api/v1/resource/predict", AnalysisResourceInfo)
 	// 运行服务器
 	router.Run(":8080")
+	fmt.Println("End")
 }
 
 func AnalysisResourceInfo(ctx *gin.Context) {
